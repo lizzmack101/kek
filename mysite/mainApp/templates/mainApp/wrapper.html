@@ -1,0 +1,28 @@
+
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HACK</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+  </head>
+  <body style="background: silver">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>{% include "mainApp/includes/some_html.html" %}</h1>
+        {% block content %}
+
+
+        {% endblock %}
+        <p>
+          <a href="/" class="btn btn-success btn-lg">Main kek</a>
+          <a href="/News/" class="btn btn-primary btn-lg">List of Students &raquo;</a>
+          <a href="/schedule" class="btn btn-info btn-lg">Schedule</a>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <img src="{%static 'mainApp/image/igrovoy-zadrot.jpg'%}" class="img-thumbnail">
+  </body>
+</html>

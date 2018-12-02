@@ -1,0 +1,8 @@
+{% extends "mainApp/wrapper.html"%}
+
+{% block content %}
+    <h5 class ="text-info">It is {{student.name}}</h5>
+    <h5 class ="text-info">Born:{{student.birthdata|date:"d-m-Y"}}</h5>
+    <p> {{student.email}}</p>
+    <p> {{student.number}}</p>
+{% endblock %}
