@@ -1,5 +1,166 @@
 {% extends "mainApp/wrapper.html"%}
 {% block content %}
-<p >Hello it's a page for FB-74</p>
+{% load staticfiles%}
+<!-- Services Section Start -->
+<section id="services" class="services section-padding">
+ <div class="container">
+   <div class="row">
+     <div class="col-12">
+       <div class="section-title-header text-center">
+         <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">{% include "mainApp/includes/some_html.html" %}</h1>
+         <p class="wow fadeInDown" data-wow-delay="0.2s">Best group ever been.</p>
+       </div>
+     </div>
+   </div>
+   <div class="row services-wrapper">
+     <!-- Services item -->
+     <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
+       <div class="services-item wow fadeInDown" data-wow-delay="0.2s">
+         <div class="icon">
+           <i class="lni-heart"></i>
+         </div>
+         <div class="services-content">
+           <h3><a href="#">Get Inspired</a></h3>
+           <p>Everyone can become your new friend.</p>
+         </div>
+       </div>
+     </div>
+     <!-- Services item -->
+     <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
+       <div class="services-item wow fadeInDown" data-wow-delay="0.4s">
+         <div class="icon">
+           <i class="lni-gallery"></i>
+         </div>
+         <div class="services-content">
+           <h3><a href="#">Meet New Faces</a></h3>
+           <p>We use modern solutions to make our studying easier.</p>
+         </div>
+       </div>
+     </div>
+     <!-- Services item -->
+     <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
+       <div class="services-item wow fadeInDown" data-wow-delay="0.6s">
+         <div class="icon">
+           <i class="lni-envelope"></i>
+         </div>
+         <div class="services-content">
+           <h3><a href="#">Fresh Tech Insights</a></h3>
+           <p>We learn cybersecurity with top mentors of Ukraine.</p>
+         </div>
+       </div>
+     </div>
+     <!-- Services item -->
+     <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
+       <div class="services-item wow fadeInDown" data-wow-delay="0.8s">
+         <div class="icon">
+           <i class="lni-cup"></i>
+         </div>
+         <div class="services-content">
+           <h3><a href="#">Networking Session</a></h3>
+           <p>We play CTF and win.</p>
+         </div>
+       </div>
+     </div>
+      <!-- Services item -->
+     <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
+       <div class="services-item wow fadeInDown" data-wow-delay="1s">
+         <div class="icon">
+           <i class="lni-user"></i>
+         </div>
+         <div class="services-content">
+           <h3><a href="#">Global Event</a></h3>
+           <p>We are famous in IPT KPI.</p>
+         </div>
+       </div>
+     </div>
+      <!-- Services item -->
+     <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
+       <div class="services-item wow fadeInDown" data-wow-delay="1.2s">
+         <div class="icon">
+           <i class="lni-bubble"></i>
+         </div>
+         <div class="services-content">
+           <h3><a href="#">Free Swags</a></h3>
+           <p>JUST FOR LULZ</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+<!-- Services Section End -->
 
+
+<!-- Counter Area Start-->
+<section class="counter-section section-padding">
+ <div class="container">
+   <div class="row">
+     <!-- Counter Item -->
+     <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+       <div class="counter wow fadeInRight" data-wow-delay="0.3s">
+         <div class="icon"><i class="lni-map"></i></div>
+         <p>NTUU "KPI"</p>
+         <span>Kiev, UA</span>
+       </div>
+     </div>
+     <!-- Counter Item -->
+     <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+       <div class="counter wow fadeInRight" data-wow-delay="0.6s">
+         <div class="icon"><i class="lni-timer"></i></div>
+         <p>3rd term </p>
+         <span>study from 08:30 AM – 04:00 PM</span>
+       </div>
+     </div>
+     <!-- Counter Item -->
+     <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+       <div class="counter wow fadeInRight" data-wow-delay="0.9s">
+         <div class="icon"><i class="lni-users"></i></div>
+         <p>25 Available Students</p>
+         <span>Hurryup! Don't be kicked</span>
+       </div>
+     </div>
+     <!-- Counter Item -->
+     <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+       <div class="counter wow fadeInRight" data-wow-delay="1.2s">
+         <div class="icon"><i class="lni-coffee-cup"></i></div>
+         <p>Free Lunch & Snacks</p>
+         <span>Just ask if u feel lonely.</span>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+<!-- Counter Area End-->
+
+
+<!-- Event Slides Section Start -->
+<section id="event-slides" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-header text-center">
+          <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Event Guideline</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Global Grand Event on Digital Design</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
+        <div class="video">
+          <img class="img-fluid" src="{%static 'mainApp/assets/img/about/about.jpg'%}" alt="">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
+        <p class="intro-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+        </p>
+        <h2 class="intro-title">Check List</h2>
+        <ul class="list-specification">
+          <li><i class="lni-check-mark-circle"></i> Lorem Ipsum is simply dummy</li>
+          <li><i class="lni-check-mark-circle"></i> Ipsum passages, and more recently</li>
+          <li><i class="lni-check-mark-circle"></i> PageMaker including versions</li>
+          <li><i class="lni-check-mark-circle"></i> Lorem Ipsum is simply dummy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Event Slides Section End -->
 {% endblock %}

@@ -1,7 +1,389 @@
 {% extends "mainApp/wrapper.html"%}
 
 {% block content %}
-  {% for post in object_list %}
-  <a href="/schedule/{{post.id}}"><h5>{{post.name}}</h5>
-  {% endfor %}
+
+<!-- Schedule Section Start -->
+<section id="schedules" class="schedule section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-header text-center">
+          <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Event Schedules</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor</p>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
+      <div class="schedule-tab-title col-md-3 col-lg-3 col-xs-12">
+        <div class="table-responsive">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="monday" aria-expanded="true">
+                <div class="item-text">
+                  <h4>Monday</h4>
+                  <h5>Hardest day</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#tuesday" role="tab" aria-controls="tuesday">
+                <div class="item-text">
+                  <h4>Tuesday</h4>
+                  <h5>Just keep being alive</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="wednesday-tab" data-toggle="tab" href="#wednesday" role="tab" aria-controls="wednesday">
+                <div class="item-text">
+                  <h4>Wednesday</h4>
+                  <h5>Yes, it is,my dudes</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="thursday-tab" data-toggle="tab" href="#thursday" role="tab" aria-controls="thursday">
+                <div class="item-text">
+                  <h4>Thursday</h4>
+                  <h5>Short distance to Friday.</h5>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="friday-tab" data-toggle="tab" href="#friday" role="tab" aria-controls="friday">
+                <div class="item-text">
+                  <h4>Friday</h4>
+                  <h5>Study. Drink. Rest</h5>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="schedule-tab-content col-md-9 col-lg-9 col-xs-12 clearfix">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+            <div id="accordion">
+              <div class="card">
+                <div id="headingOne">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
+                    </div>
+                    <span class="time">8:30am - 10:00am</span>
+                    <h4>
+                    {% for post in object_list %}
+                    {% if "Понеділок 1" in post.name %}
+                    Понеділок 1
+                    {% endif %}
+                    {% endfor %}</h4>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+                    {% if "Понеділок 1" in post.name %}
+                    <span class="text-danger">{{post.para1}}</span><br>
+                    <span class="text-danger">{{post.para2}}</span><br>
+                    <span class="text-danger">{{post.para3}}</span><br>
+                    <span class="text-danger">{{post.para4}}</span><br>
+                    {% endif %}
+                    {% endfor %}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div id="headingTwo">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
+                    </div>
+
+                    <h4>{% for post in object_list %}
+                    {% if "Понеділок 2" in post.name %}
+                    Понеділок 2
+                    {% endif %}
+                    {% endfor %}</h4>
+                  </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+                    {% if "Понеділок 2" in post.name %}
+                    <span class="text-danger">{{post.para1}}</span><br>
+                    <span class="text-danger">{{post.para2}}</span><br>
+                    <span class="text-danger">{{post.para3}}</span><br>
+                    <span class="text-danger">{{post.para4}}</span><br>
+                    {% endif %}
+                    {% endfor %}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
+            <div id="accordion2">
+              <div class="card">
+                <div id="headingOne1">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "Вівторок 1" in post.name %}
+                    Вівторок 1
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1" data-parent="#accordion2">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "Вівторок 1" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div id="headingTwo2">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "Вівторок 2" in post.name %}
+                    Вівторок 2
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "Вівторок 2" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="wednesday" role="tabpanel" aria-labelledby="wednesday-tab">
+            <div id="accordion3">
+              <div class="card">
+                <div id="headingOne3">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "Середа 1" in post.name %}
+                    Середа 1
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseOne3" class="collapse show" aria-labelledby="headingOne3" data-parent="#accordion3">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "Середа 1" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                    <div class="location">
+                      <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div id="headingTwo3">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "Середа 2" in post.name %}
+                    Середа 2
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseTwo3" class="collapse" aria-labelledby="headingTwo3" data-parent="#accordion3">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "Середа 2" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                    <div class="location">
+                      <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="thursday" role="tabpanel" aria-labelledby="thursday-tab">
+            <div id="accordion4">
+              <div class="card">
+                <div id="headingOne">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "Четвер 1" in post.name %}
+                    Четвер 1
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseOne4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion4">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "Четвер 1" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                    <div class="location">
+                      <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div id="headingTwo">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "Четвер 2" in post.name %}
+                    Четвер 2
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseTwo4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion4">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "Четвер 2" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                    <div class="location">
+                      <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="friday" role="tabpanel" aria-labelledby="friday-tab">
+            <div id="accordion">
+              <div class="card">
+                <div id="headingOne">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "П`ятниця 1" in post.name %}
+                    П`ятниця 1
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseOne5" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "П`ятниця 1" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                    <div class="location">
+                      <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div id="headingTwo">
+                  <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo5" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="images-box">
+                      <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
+                    </div>
+                    <span class="time">10am - 12:30pm</span>
+                    <h4>{% for post in object_list %}
+                    {% if "П`ятниця 2" in post.name %}
+                    П`ятниця 2
+                    {% endif %}
+                    {% endfor %}</h4>
+                    <h5 class="name">David Warner</h5>
+                  </div>
+                </div>
+                <div id="collapseTwo5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>{% for post in object_list %}
+{% if "П`ятниця 2" in post.name %}
+<span class="text-danger">{{post.para1}}</span><br>
+<span class="text-danger">{{post.para2}}</span><br>
+<span class="text-danger">{{post.para3}}</span><br>
+<span class="text-danger">{{post.para4}}</span><br>
+{% endif %}
+{% endfor %}</p>
+                    <div class="location">
+                      <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Schedule Section End -->
 {% endblock %}

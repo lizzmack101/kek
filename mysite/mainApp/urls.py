@@ -18,5 +18,4 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='HACK'),
-    url(r'^contact/$', views.contact, name='HACK1'),
 ]

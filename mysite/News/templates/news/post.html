@@ -1,7 +1,47 @@
 {% extends "mainApp/wrapper.html"%}
 
 {% block content %}
-  {% for post in object_list %}
-  <a href="/News/{{post.id}}"><h5>{{post.name}}</h5>
-  {% endfor %}
-{% endblock %}
+
+
+
+<!-- Ask Question Section Start -->
+<section id="faq" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-header text-center">
+          <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">List of students</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Global Grand Event on Digital Design</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 col-md-12 col-xs-12 col-sm-12">
+        {% for post in object_list %}
+
+        <div class="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <div class="header-title" data-toggle="collapse" data-target="#question{{post.id}}" aria-expanded="true" aria-controls="collapseOne">
+                <i class="lni-user"></i> {{post.name}}
+              </div>
+            </div>
+            <div id="question{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#question">
+              <div class="card-body">
+                <span class="btn btn-danger">Born:{{post.birthdata|date:"d-m-Y"}}</span>
+                <span class="btn btn-danger">E-mail: {{post.email}}</span>
+                <span class="btn btn-danger">Number: {{post.number}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Ask Question Section End -->
+
+
+  {% endblock %}

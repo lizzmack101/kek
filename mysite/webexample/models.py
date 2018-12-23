@@ -10,6 +10,7 @@ class Schedule (models.Model):
     para2 = models.TextField();
     para3 = models.TextField();
     para4 = models.TextField();
-
+    teacher = models.CharField(max_length = 30, default = "kek");
+    location = models.CharField(max_length = 10, default = "kek");
     def __unicode__(self):
         return self.name

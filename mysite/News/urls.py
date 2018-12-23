@@ -18,7 +18,7 @@ from django.views.generic import ListView, DetailView
 from News.models import Student
 
 urlpatterns = [
-    url(r'^$', ListView.as_view(queryset=Student.objects.all().order_by("id")[:15],
+    url(r'^$', ListView.as_view( queryset=Student.objects.all().order_by("id"),
     template_name="news/post.html") ),
     url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Student,
     template_name = "news/student.html")),
